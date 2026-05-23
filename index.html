@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan's Hub download pack mc bugrock - Bagikan Konten Minecraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utama: '#22C55E',
+                        gelap: '#121214',
+                        gelap2: '#1E1E24',
+                        terang: '#FFFFFF',
+                        abu: '#A0A0A8',
+                        addon: '#22C55E',
+                        sumberdaya: '#22C55E',
+                        peta: '#22C55E',
+                        rp: '#22C55E'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .kontainer {
+                @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+            }
+            .kartu-konten {
+                @apply bg-gelap2 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-transparent hover:border-utama/40;
+            }
+            .tombol {
+                @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 cursor-pointer;
+            }
+            .kategori-aktif {
+                @apply bg-utama text-terang;
+            }
+            .kategori-tidak-aktif {
+                @apply bg-gelap2 text-terang hover:bg-gelap/80;
+            }
+            .sembunyi {
+                @apply hidden;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gelap text-terang font-sans">
+    <!-- Bagian Atas -->
+    <header class="sticky top-0 z-50 bg-gelap/95 backdrop-blur-sm border-b border-gelap2">
+        <div class="kontainer py-4 flex items-center justify-between gap-4">
+            <div class="flex items-center">
+                <span class="text-xl font-bold">Milan's File</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pilihan Kategori -->
+    <section class="py-6 border-b border-gelap2">
+        <div class="kontainer">
+            <h2 class="text-2xl font-bold mb-4">Kategorinya woi, jgn buta dah</h2>
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button class="tombol kategori-aktif" data-kategori="semua">Semua</button>
+                <button class="tombol kategori-tidak-aktif" data-kategori="addon">Add-on</button>
+                <button class="tombol kategori-tidak-aktif" data-kategori="rp">Resourcepackbedrock</button>
+                <button class="tombol kategori-tidak-aktif" data-kategori="peta">Maps mc</button>
+                <button class="tombol kategori-tidak-aktif" data-kategori="rpjava">Resourcepackjava</button>
+                <button class="tombol kategori-tidak-aktif" data-kategori="mpjava">Modpack java</button> 
+                <img src="IMG-20260519-WA0295.jpg"
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Pencarian -->
+    <section class="py-4 border-b border-gelap2">
+        <div class="kontainer">
+            <div class="max-w-2xl mx-auto relative w-full">
+                <input type="text" id="kolomCari" placeholder="Nyari disini ya masse..." 
+                    class="w-full bg-gelap2 rounded-lg py-2.5 px-10 outline-none focus:ring-2 focus:ring-utama transition">
+                <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-abu"></i>
+                <button id="tombolCari" class="absolute right-2 top-1/2 -translate-y-1/2 bg-utama px-3 py-1 rounded hover:bg-utama/90">
+                    Cari
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Konten -->
+    <main class="py-8">
+        <div class="kontainer">
+            <div id="daftarKonten" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Konten XNOVA MODEL V4 -->
+                <div class="kartu-konten" data-kategori="rp" onclick="bukaJendela('XNOVA MODEL V4', 'rp', 'https://sfl.gl/mGEEmagQ')">
+                    <img src="1773012251104.jpg" alt="XNOVA MODEL V4" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : Xnovasm</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Resourcepackbedrock</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">animation</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">survival</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">model</span>
+                        <h3 class="font-bold text-lg mb-1">XNOVA MODEL V4</h3>
+                        <p class="text-abu text-sm">bug fixed on action and stuff,by xnova</p>
+                    </div>
+                </div>
+
+                <!-- Konten Action and Stuff -->
+                <div class="kartu-konten" data-kategori="rp" onclick="bukaJendela('Action and Stuff', 'rp', 'https://sfl.gl/m6cJyb')">
+                    <img src="IMG-20260506-WA0163.jpg" alt="Action and Stuff" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : Oreville Studios</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Resourcepackbedrock</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">animation</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">texture blocks</span>
+                        <h3 class="font-bold text-lg mb-1">Action and Stuff</h3>
+                        <p class="text-abu text-sm">improvement animation of minecraft bedrock edition</p>
+                  </div>
+                </div>
+                
+                <!-- Konten 3 -->
+                <div class="kartu-konten" data-kategori="rp" onclick="bukaJendela('Stellar graphic', 'rp', 'https://www.mediafire.com/file/yy8dhsl6wlxq5e0/sgrMain.mcpack/file')">
+                    <img src="stellar-graphics-v2_2.png" alt="Stellar-graphic" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : Sparkskye</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Resourcepackbedrock</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">texture</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">clouds</span>
+                        <h3 class="font-bold text-lg mb-1">STELLAR GRAPHICS REIMAGINED</h3>
+                        <p class="text-abu text-sm">Shaders for renderdragon user</p>
+                    </div>
+                </div>
+
+                <!-- Konten 4 -->
+                <div class="kartu-konten" data-kategori="addon" onclick="bukaJendela('OP SWORD', 'addon', 'https://sfl.gl/TXA2uMr6')">
+                    <img src="IMG-20260506-WA0207.jpg" alt="Overpower Swords" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : </p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Add-on</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">combat</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">fight</span>
+                        <h3 class="font-bold text-lg mb-1">OP SWORDS</h3>
+                        <p class="text-abu text-sm">Legendary sword</p>
+                    </div>
+                </div>
+
+                <!-- Konten 5 -->
+                <div class="kartu-konten" data-kategori="addon" onclick="bukaJendela('wither storm', 'addon', 'https://sfl.gl/3LWBq7')">
+                    <img src="IMG-20260313-WA0010.jpg" alt="Wither storm" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : TazolaTaza</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Add-on</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">monster</span>
+                        <h3 class="font-bold text-lg mb-1">Wither storm</h3>
+                        <p class="text-abu text-sm">Wither mas amba</p>
+                    </div>
+                </div>
+
+                <!-- Konten 6 -->
+                <div class="kartu-konten" data-kategori="rp" onclick="bukaJendela('Azify Potato Shader', 'rp', 'https://edge.forgecdn.net/files/7965/259/afst-4.0-android.mcpack?ft=d6c0bbcf6048fd3f6de4385a5a0a7639&bd=cyyyqn11gr')">
+                    <img src="screenshot-583-png.png" alt="Azify potato shader" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : Azion Studios</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Resourcepackbedrock</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">shader</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">improve visual</span>
+                        <h3 class="font-bold text-lg mb-1">Azify Potato Shader</h3>
+                        <p class="text-abu text-sm">shaders for potato phone, Like you (im joking)</p>
+                    </div>
+                </div>
+
+                <!-- Konten 7 -->
+                <div class="kartu-konten" data-kategori="addon" onclick="bukaJendela('La Nature', 'addon', 'https://sfl.gl/UFYpvIoa')">
+                    <img src="IMG-20260506-WA0264.jpg" alt="La Nature" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : LaCarotteRebel</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Add-on</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">nature</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">improve visual</span>
+                        <h3 class="font-bold text-lg mb-1">La Nature</h3>
+                        <p class="text-abu text-sm">Add-on To beautify the world</p>
+                    </div>
+                </div>
+
+                <!-- Konten 8 -->
+                <div class="kartu-konten" data-kategori="addon" onclick="bukaJendela('bloomy dynamic light', 'addon', 'https://mcpedl.com/bloomy-dynamic-lights/')">
+                    <img src="0-gif.gif" alt="Bloomy Dynamic Light" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : FoxyFall</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Add-on</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">light update</span>
+                        <h3 class="font-bold text-lg mb-1">Bloomy dynamic light</h3>
+                        <p class="text-abu text-sm">add dynamic light, like java mc</p>
+                    </div>
+                </div>
+
+                <!-- Konten 9 -->
+                <div class="kartu-konten" data-kategori="rp" onclick="bukaJendela('Health bar indicator', 'rp', 'https://mcpedl.com/health-bar-indicator/')">
+                    <img src="IMG-20260506-WA0275.jpg" alt="Health bar indicator" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : FoxyFall</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Resourcepackbedrock</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">texture</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">mobs</span>
+                        <h3 class="font-bold text-lg mb-1">health bar indicator</h3>
+                        <p class="text-abu text-sm">indikator bar untuk entity</p>
+                    </div>
+                </div>
+                
+                <div class="kartu-konten" data-kategori="addon" onclick="bukaJendela('Bedrock reimagined', 'addon', 'https://sfl.gl/lPzFJ')">
+                    <img src="IMG-20260506-WA0227.jpg" alt="bedrock reimagined" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : 5FrameStudio</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Add-on</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">more mobs</span>
+                        <h3 class="font-bold text-lg mb-1">bedrock reimagined</h3>
+                        <p class="text-abu text-sm">FOR 26.1+</p>
+                    </div>
+                </div>
+                
+                <div class="kartu-konten" data-kategori="peta" onclick="bukaJendela('cherry blossom', 'addon', 'https://www.bisecthosting.com/es-mx/blog/minecraft-cherry-blossom-seeds-locations-coordinates')">
+                    <img src="MCCherry4.webp" alt="cherry blossom" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">By : Larkyndel</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Maps mc</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">cherry blossom</span>      
+                        <h3 class="font-bold text-lg mb-1">Cherry blossom</h3>
+                        <p class="text-abu text-sm">Cherry blossom beautiful</p>        
+                    </div>
+                 </div>
+                
+                 <div class="kartu-konten" data-kategori="mpjava" onclick="bukaJendela('modpack java 1.21.4', 'mpjava', 'https://www.mediafire.com/file/nr1fua3q2x40yjh/Fabulously+Vulkanium+Final+1.21.4+(PVP).zip/file')">
+                    <img src="IMG-20260511-WA0104.jpg" alt="modpack vulkan 1.21.4" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : milz</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Reourcepackjava</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">vulkan</span>
+                        <h3 class="font-bold text-lg mb-1">Vulkan modpack 1.21.4</h3>
+                        <p class="text-abu text-sm">modpack minecraft java</p>
+                    </div>
+                </div>
+                
+                <div class="kartu-konten" data-kategori="rp" onclick="bukaJendela('view model action and stuff', 'rp', 'https://www.curseforge.com/minecraft-bedrock/texture-packs/view-model-a-s-by-justpals')">
+                    <img src="IMG-20260519-WA0030.jpg" alt="modpack vulkan 1.21.4" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : JustPals</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Reourcepackbedrock</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">actionandstuff</span>
+                        <h3 class="font-bold text-lg mb-1">View Model action and stuff</h3>
+                        <p class="text-abu text-sm">view model for action and stuff</p>
+                    </div>
+                </div>
+                
+                <div class="kartu-konten" data-kategori="rp" onclick="bukaJendela('Azify low poly chunks shaders', 'rp', 'https://www.curseforge.com/minecraft-bedrock/texture-packs/azify-low-poly-chunks-lower-quality-of-far-chunks')">
+                    <img src="25428-jpg.jpg" alt="a" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : Azion Studios</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">Reourcepackbedrock</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">chunks</span>
+                        <h3 class="font-bold text-lg mb-1">azify Low poly chunks</h3>
+                        <p class="text-abu text-sm">using mb loader</p>
+                    </div>
+                </div>
+                
+                <div class="kartu-konten" data-kategori="addon" onclick="bukaJendela('More Body Action!', 'addon', 'https://www.curseforge.com/minecraft-bedrock/addons/more-body-actions-cf/gallery')">
+                    <img src="IMG-20260523-WA0498.jpg" alt="More Body Action!" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-abu text-xs mb-1">Uploader : milz</p>
+                        <p class="text-abu text-xs mb-1">Created by : Sirob</p>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">add-on</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">action</span>
+                        <span class="bg-rp/20 text-rp text-xs px-2 py-0.5 rounded mb-2 inline-block">player</span>
+                        <h3 class="font-bold text-lg mb-1">More Body Action!</h3>
+                        <p class="text-abu text-sm">More Body Action!</p>
+                
+            <div id="pesanKosong" class="sembunyi text-center py-12 text-abu">
+                <i class="fa fa-folder-open text-6xl mb-3"></i>
+                <p class="text-xl">Gaada mas, ngapain?</p>
+                </div>
+                </div>
+            </div>
+            <div id="pesanKosong" class="sembunyi text-center py-12 text-abu">
+                <i class="fa fa-folder-open text-6xl mb-3"></i>
+                <p class="text-xl">Gaada mas, ngapain?</p>
+            </div>
+        </div>
+    </main>
+                        
+    <!-- Jendela Pop-up Unduhan -->
+    <div id="jendelaUnduh" class="sembunyi fixed inset-0 bg-black/80 z-[999] flex items-center justify-center p-4">
+        <div class="bg-gelap2 rounded-xl p-6 w-full max-w-md shadow-2xl border border-utama/30">
+            <h3 id="judulKonten" class="text-2xl font-bold mb-2"></h3>
+            <p id="jenisKonten" class="text-abu mb-6"></p>
+            <div class="flex gap-3">
+                <a id="tautanUnduh" href="#" target="_blank" class="tombol bg-utama hover:bg-utama/90 text-terang flex-1 text-center">
+                    <i class="fa fa-download mr-2"></i> Get it!
+                </a>
+                <button onclick="tutupJendela()" class="tombol bg-gelap hover:bg-gelap/70 text-terang">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi Buka-Tutup Jendela Unduhan
+        function bukaJendela(nama, jenis, tautan) {
+            document.getElementById('judulKonten').innerText = nama;
+            document.getElementById('jenisKonten').innerText = `Jenis: ${jenis}`;
+            document.getElementById('tautanUnduh').href = tautan;
+            document.getElementById('jendelaUnduh').classList.remove('sembunyi');
+        }
+
+        function tutupJendela() {
+            document.getElementById('jendelaUnduh').classList.add('sembunyi');
+        }
+
+        // Tutup jendela jika klik di luar kotak
+        document.getElementById('jendelaUnduh').addEventListener('click', (e) => {
+            if (e.target.id === 'jendelaUnduh') tutupJendela();
+        });
+
+        // Fungsi Penyaringan Kategori
+        const tombolKategori = document.querySelectorAll('[data-kategori]');
+        const semuaKartu = document.querySelectorAll('.kartu-konten');
+        const pesanKosong = document.getElementById('pesanKosong');
+
+        tombolKategori.forEach(tombol => {
+            tombol.addEventListener('click', () => {
+                tombolKategori.forEach(t => t.classList.replace('kategori-aktif', 'kategori-tidak-aktif'));
+                tombol.classList.replace('kategori-tidak-aktif', 'kategori-aktif');
+                
+                const pilih = tombol.dataset.kategori;
+                let jumlahTampil = 0;
+
+                semuaKartu.forEach(kartu => {
+                    if (pilih === 'semua' || kartu.dataset.kategori === pilih) {
+                        kartu.style.display = 'block';
+                        jumlahTampil++;
+                    } else {
+                        kartu.style.display = 'none';
+                    }
+                });
+
+                pesanKosong.classList.toggle('sembunyi', jumlahTampil === 0);
+            });
+        });
+
+        // Fungsi Pencarian
+        const kolomCari = document.getElementById('kolomCari');
+        const tombolCari = document.getElementById('tombolCari');
+
+        function cariKonten() {
+            const kata = kolomCari.value.toLowerCase().trim();
+            let jumlahTampil = 0;
+
+            semuaKartu.forEach(kartu => {
+                const teks = kartu.innerText.toLowerCase();
+                if (teks.includes(kata)) {
+                    kartu.style.display = 'block';
+                    jumlahTampil++;
+                } else {
+                    kartu.style.display = 'none';
+                }
+            });
+
+            pesanKosong.classList.toggle('sembunyi', jumlahTampil > 0);
+        }
+
+        tombolCari.addEventListener('click', cariKonten);
+        kolomCari.addEventListener('keypress', (e) => e.key === 'Enter' && cariKonten());
+    </script>
+</body>
+</html>
